@@ -11,16 +11,17 @@
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      background-color: #0c0c0c;
-      color: white;
-      padding-top: 50px;
+      background-color: #f0f0f0; /* Color suave de fondo */
+      color: #333333; /* Color de texto oscuro pero suave */
+      padding-top: 60px;
     }
 
+    /* === BANNER DE CABECERA CON IMAGEN === */
     .hero-banner {
       background-image: url('Imagenes/portada-libro.jpg'); /* Coloca aquí la imagen de portada del libro */
       background-size: cover;
       background-position: center;
-      height: 320px;
+      height: 350px;
       position: relative;
       display: flex;
       align-items: center;
@@ -29,7 +30,7 @@
     }
 
     .overlay {
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.3); /* Fondo oscuro pero suave */
       width: 100%;
       height: 100%;
       padding: 20px;
@@ -41,64 +42,69 @@
     }
 
     .overlay h1 {
-      font-size: 2.8em;
+      font-size: 3em;
       margin: 0;
-      color: #ff2a2a;
+      color: #f2e1c6; /* Dorado suave */
       text-shadow: 2px 2px 8px black;
     }
 
     .overlay p {
-      font-size: 1.4em;
+      font-size: 1.5em;
       margin-top: 10px;
-      color: #fff;
+      color: #f2e1c6; /* Dorado suave */
       text-shadow: 1px 1px 6px black;
     }
 
     nav {
-      background-color: rgba(0, 0, 0, 0.9);
-      padding: 12px 0;
+      background-color: #ffffff;
+      padding: 15px 0;
       text-align: center;
       position: sticky;
       top: 0;
       z-index: 999;
-      box-shadow: 0 2px 5px rgba(255, 0, 0, 0.3);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
 
     nav a {
-      color: white;
-      margin: 0 20px;
+      color: #333333;
+      margin: 0 25px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1.1em;
+      font-size: 1.2em;
       transition: color 0.3s ease;
     }
 
     nav a:hover {
-      color: #ff3333;
+      color: #f2e1c6; /* Dorado suave */
     }
 
     .section {
-      padding: 40px 20px;
+      padding: 60px 20px;
       text-align: center;
     }
 
     .section h2 {
-      color: #ff3333;
-      font-size: 2em;
-      margin-bottom: 20px;
+      color: #5d5d5d;
+      font-size: 2.2em;
+      margin-bottom: 30px;
     }
 
     .products {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      gap: 30px;
     }
 
     .product {
-      background-color: #1a1a1a;
+      background-color: #ffffff;
       padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
     }
 
     .product img {
@@ -107,66 +113,83 @@
     }
 
     .product h3 {
-      color: #ff5555;
+      color: #2a2a2a;
       margin-top: 15px;
+      font-size: 1.6em;
     }
 
     .product p {
-      font-size: 0.95em;
+      font-size: 1em;
+      color: #666666;
+      line-height: 1.6;
+    }
+
+    .product p.price {
+      font-size: 1.2em;
+      color: #f2e1c6;
+      font-weight: bold;
+      margin-top: 10px;
     }
 
     .contact {
-      background-color: #111;
-      padding: 40px;
+      background-color: #f9f9f9;
+      padding: 60px 20px;
       text-align: center;
     }
 
     .contact h2 {
-      color: #ff4444;
+      color: #5d5d5d;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .contact p {
+      font-size: 1.1em;
+      color: #333333;
     }
 
     footer {
-      background-color: #111;
-      color: #aaa;
+      background-color: #333333;
+      color: #f2e1c6;
       padding: 20px;
       text-align: center;
     }
 
     .btn {
       display: inline-block;
-      background-color: #25d366;
+      background-color: #4e73df; /* Azul elegante */
       color: white;
-      padding: 10px 20px;
+      padding: 12px 25px;
       border: none;
-      border-radius: 6px;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1em;
-      margin-top: 10px;
+      font-size: 1.1em;
+      margin-top: 15px;
       transition: background 0.3s ease;
     }
 
     .btn i {
-      margin-right: 8px;
+      margin-right: 10px;
       font-size: 1.2em;
     }
 
     .btn:hover {
-      background-color: #1ebd5b;
+      background-color: #2e59d9; /* Azul más oscuro */
     }
 
     .promo-bar {
       position: fixed;
       top: 0;
       width: 100%;
-      background-color: #ff0000;
+      background-color: #5d5d5d; /* Gris suave */
       color: white;
       font-weight: bold;
       text-align: center;
-      padding: 12px 10px;
+      padding: 15px 0;
       font-size: 1.1em;
       z-index: 9999;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     }
 
     .promo-bar .close-btn {
@@ -191,7 +214,7 @@
     <a href="#venta">Venta</a>
     <a href="#contacto">Contacto</a>
   </nav>
-  
+
   <!-- BANNER -->
   <header class="hero-banner">
     <div class="overlay">
@@ -214,8 +237,7 @@
         <img src="Imagenes/portada-libro.jpg" alt="Árbol Genealógico">
         <h3>Árbol Genealógico - Gabriel Henkel</h3>
         <p>Una obra única que explora la genealogía de varias familias, con más de 250 páginas de historia y relatos fascinantes.</p>
-        <p style="color: #ff3333; font-weight: bold;">🔥 ¡Disponible ahora por solo $200 MXN!</p>
-        <p><strong>$200 MXN</strong></p>
+        <p class="price">$200 MXN</p>
         <a class="btn" href="https://wa.me/5216240000000?text=Hola!%20Estoy%20interesado%20en%20el%20libro%20Árbol%20Genealógico%20de%20Gabriel%20Henkel" target="_blank">
           <i class="fab fa-whatsapp"></i> Comprar ahora
         </a>
@@ -226,23 +248,4 @@
   <!-- CONTACTO -->
   <div class="contact" id="contacto">
     <h2>Contáctanos</h2>
-    <p>WhatsApp: <a href="https://wa.me/5216241181978" style="color: #ff5555">624 118 1978</a></p>
-    <p>Email: gabrielhenkel@correo.com</p>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 Gabriel Henkel | Todos los derechos reservados</p>
-  </footer>
-  
-<script>
-  // Función para cerrar la promo
-  function cerrarPromo() {
-    document.getElementById("promoBar").style.display = "none";
-  }
-
-  // Cierre automático después de 5 segundos
-  setTimeout(cerrarPromo, 5000);
-</script>
-  
-</body>
-</html>
+    <p>WhatsApp: <a href="https://wa.me/5216241181978
