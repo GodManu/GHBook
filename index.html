@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Compra el libro sobre árboles genealógicos de Gabriel Henkel. Una obra única que detalla la historia de varias familias a través de su genealogía.">
+  <meta name="author" content="Gabriel Henkel">
+  <title>Árbol Genealógico | Gabriel Henkel</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #0c0c0c;
+      color: white;
+      padding-top: 50px;
+    }
+
+    .hero-banner {
+      background-image: url('Imagenes/portada-libro.jpg'); /* Coloca aquí la imagen de portada del libro */
+      background-size: cover;
+      background-position: center;
+      height: 320px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .overlay h1 {
+      font-size: 2.8em;
+      margin: 0;
+      color: #ff2a2a;
+      text-shadow: 2px 2px 8px black;
+    }
+
+    .overlay p {
+      font-size: 1.4em;
+      margin-top: 10px;
+      color: #fff;
+      text-shadow: 1px 1px 6px black;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 12px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 5px rgba(255, 0, 0, 0.3);
+    }
+
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff3333;
+    }
+
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      color: #ff3333;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .product {
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+    }
+
+    .product img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .product h3 {
+      color: #ff5555;
+      margin-top: 15px;
+    }
+
+    .product p {
+      font-size: 0.95em;
+    }
+
+    .contact {
+      background-color: #111;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .contact h2 {
+      color: #ff4444;
+    }
+
+    footer {
+      background-color: #111;
+      color: #aaa;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #25d366;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1em;
+      margin-top: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .btn i {
+      margin-right: 8px;
+      font-size: 1.2em;
+    }
+
+    .btn:hover {
+      background-color: #1ebd5b;
+    }
+
+    .promo-bar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #ff0000;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      padding: 12px 10px;
+      font-size: 1.1em;
+      z-index: 9999;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    }
+
+    .promo-bar .close-btn {
+      position: absolute;
+      right: 15px;
+      top: 8px;
+      cursor: pointer;
+      font-size: 1.2em;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="promo-bar" id="promoBar">
+    🎉 PROMO: ¡Compra el libro ahora y recibe un descuento exclusivo en la próxima compra!
+    <span class="close-btn" onclick="cerrarPromo()">✖️</span>
+  </div>
+
+  <!-- NAVEGACIÓN -->
+  <nav>
+    <a href="#venta">Venta</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  
+  <!-- BANNER -->
+  <header class="hero-banner">
+    <div class="overlay">
+      <h1>Árbol Genealógico</h1>
+      <p>Un viaje en la historia familiar</p>
+    </div>
+  </header>
+
+  <div class="section" id="descripcion">
+    <h2>Presentación del Libro</h2>
+    <p>El libro de Gabriel Henkel es una obra única que explora las raíces y la historia de varias familias a través de sus árboles genealógicos. Con más de 250 páginas, descubrirás conexiones, secretos y relatos de generaciones pasadas que te sorprenderán.</p>
+    <p>Una lectura imprescindible para quienes deseen conocer más sobre la historia de sus antepasados y entender cómo la genealogía conecta a las familias a través del tiempo.</p>
+  </div>
+
+  <!-- SECCIÓN VENTA -->
+  <div class="section" id="venta">
+    <h2>Compra tu Libro</h2>
+    <div class="products">
+      <div class="product">
+        <img src="Imagenes/portada-libro.jpg" alt="Árbol Genealógico">
+        <h3>Árbol Genealógico - Gabriel Henkel</h3>
+        <p>Una obra única que explora la genealogía de varias familias, con más de 250 páginas de historia y relatos fascinantes.</p>
+        <p style="color: #ff3333; font-weight: bold;">🔥 ¡Disponible ahora por solo $200 MXN!</p>
+        <p><strong>$200 MXN</strong></p>
+        <a class="btn" href="https://wa.me/5216240000000?text=Hola!%20Estoy%20interesado%20en%20el%20libro%20Árbol%20Genealógico%20de%20Gabriel%20Henkel" target="_blank">
+          <i class="fab fa-whatsapp"></i> Comprar ahora
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACTO -->
+  <div class="contact" id="contacto">
+    <h2>Contáctanos</h2>
+    <p>WhatsApp: <a href="https://wa.me/5216241181978" style="color: #ff5555">624 118 1978</a></p>
+    <p>Email: gabrielhenkel@correo.com</p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Gabriel Henkel | Todos los derechos reservados</p>
+  </footer>
+  
+<script>
+  // Función para cerrar la promo
+  function cerrarPromo() {
+    document.getElementById("promoBar").style.display = "none";
+  }
+
+  // Cierre automático después de 5 segundos
+  setTimeout(cerrarPromo, 5000);
+</script>
+  
+</body>
+</html>
